@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Shader/CutMaterial.shader" type="Shader" id=1]
+
+[resource]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/albedo = Color( 0.901961, 0.803922, 0.388235, 1 )
+shader_param/cut_position = null
+shader_param/cut_normal = null
+shader_param/cut_size = null
+_sections_unfolded = [ "Shader Param" ]
+
