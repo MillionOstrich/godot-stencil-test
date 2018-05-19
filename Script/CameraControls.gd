@@ -7,7 +7,6 @@ var cam_yaw = 0
 var cam_pitch = 0
 var cam_xform = Quat(Vector3(1,0,0), 0)
 var cam_node = null
-var tab_pressed = false
 
 func get_cam_rotation():
 	return cam_xform
@@ -25,6 +24,13 @@ func _input(event):
 			var pitch = Quat(Vector3(1,0,0), deg2rad(cam_pitch))
 			cam_xform = Quat(Vector3(0,1,0), deg2rad(cam_yaw)) * pitch
 			cam_node.transform = Transform(cam_xform)
+	
+	if event is InputEventKey and not event.is_echo() and event.is_pressed():
+		if event.get_scancode() == KEY_TAB:
+			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			else:
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(dt):
 	var dir = Vector3(0,0,0)
@@ -42,17 +48,6 @@ func _process(dt):
 		speed *= 2.0
 	if Input.is_key_pressed(KEY_CONTROL):
 		speed *= 0.5
-	if Input.is_key_pressed(KEY_ESCAPE):
-		self.get_tree().quit()
-	if Input.is_key_pressed(KEY_TAB):
-		if not tab_pressed:
-			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			else:
-				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		tab_pressed = true
-	else:
-		tab_pressed = false
 	
 	if dir.length_squared() > 0:
 		var delta_ls = dir.normalized() * (speed * dt)

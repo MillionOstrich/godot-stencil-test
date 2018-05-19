@@ -8,10 +8,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 11.0
-margin_top = 2.0
-margin_right = 200.0
-margin_bottom = 180.0
+margin_left = 10.0
+margin_right = 199.0
+margin_bottom = 218.0
 rect_pivot_offset = Vector2( 161, 80 )
 rect_clip_content = false
 mouse_filter = 0
@@ -26,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 5.0
 margin_top = 8.0
-margin_right = -6.0
+margin_right = -4.0
 margin_bottom = -88.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -37,7 +36,9 @@ size_flags_vertical = 4
 text = "Keyboard: 
  w,a,s,d - Move
  Shift,Ctrl - Speed Up/Down
+ 1,2,3 - Toggle Lights
  Tab - Toggle Mouse Capture
+ H - Show/Hide Help
  Esc - Exit"
 align = 3
 percent_visible = 1.0
@@ -50,9 +51,9 @@ anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 5.0
-margin_top = 98.0
+margin_top = 130.0
 margin_right = -6.0
-margin_bottom = -14.0
+margin_bottom = 18.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
