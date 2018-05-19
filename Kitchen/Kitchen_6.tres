@@ -1,11 +1,13 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
 
-[ext_resource path="res://Shader/CutMaterial.shader" type="Shader" id=1]
+[ext_resource path="res://Shader/CutStencil.tres" type="Material" id=1]
+[ext_resource path="res://Shader/CutMaterial.shader" type="Shader" id=2]
 
 [resource]
 
 render_priority = 0
-shader = ExtResource( 1 )
+next_pass = ExtResource( 1 )
+shader = ExtResource( 2 )
 shader_param/albedo = Color( 0.439216, 0.592157, 0.635294, 1 )
 shader_param/cut_position = null
 shader_param/cut_normal = null
