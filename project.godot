@@ -93,4 +93,6 @@ ui_end={
 
 [rendering]
 
+quality/stencil_buffer/enable=true
+quality/stencil_buffer/enable_shadow_map=true
 environment/default_environment="res://default_env.tres"
